@@ -5,6 +5,12 @@ export default defineConfig({
     plugins: [react()],
     build: { outDir: "dist" },
     server: {
-        historyApiFallback: true, // Ensures Vercel handles React routes correctly
+        port: 3000,
     },
+    resolve: {
+        alias: {
+            "@": "/src",
+        },
+    },
+    base: "/", // Ensure correct base path
 });
