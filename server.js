@@ -12,7 +12,7 @@ const { router: authRoutes, authenticateUser } = require("./auth");
 app.use("/auth", authRoutes);
 
 // MongoDB Connection
-mongoose.connect("mongodb://localhost:27017/markdownDB");
+mongoose.connect("mongodb+srv://soumyadeepdas423:3wog6Zae4KNSn2tM@phantom.xvnjd.mongodb.net/?retryWrites=true&w=majority&appName=Phantom");
 // MongoDB Document Schema (Per User)
 const DocumentSchema = new mongoose.Schema({
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
