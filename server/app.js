@@ -111,7 +111,7 @@ app.get("/files", authenticateUser, async (req, res) => {
 
 
 // Start Server
-var port = 8000;
+var port = process.env.PORT || 8000;
 app.listen(port, () => {
     console.log(`Server running ...`);
 });
