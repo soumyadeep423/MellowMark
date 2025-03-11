@@ -11,13 +11,16 @@ MellowMark is a **real-time Markdown editor** with **user authentication** and *
 ✅ **Dark Mode UI** – Clean and minimal design  
 
 ---
+
 **Frontend: React, Vite, Showdown.js, TailwindCSS**
+
 **Backend: Node.js, Express.js, MongoDB, Mongoose, Multer**
+
 **Authentication: JWT (JSON Web Tokens)**
 
 ## 🛠️ Installation (Local Deployment)  
 
-### **1️⃣ Clone the Repository**  
+### ** Clone the Repository**  
 ```sh
 git clone https://github.com/your-username/mellowmark.git
 cd mellowmark
