@@ -13,7 +13,7 @@ const { router: authRoutes, authenticateUser } = require("./auth");
 app.use("/auth", authRoutes);
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect("mongodb://localhost:27017");
 
 // MongoDB Document Schema (Per User)
 const DocumentSchema = new mongoose.Schema({
@@ -111,7 +111,7 @@ app.get("/files", authenticateUser, async (req, res) => {
 
 
 // Start Server
-var port = process.env.PORT || 8000;
+var port = 8000;
 app.listen(port, () => {
     console.log(`Server running ...`);
 });
