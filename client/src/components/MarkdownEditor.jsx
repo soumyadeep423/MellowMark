@@ -26,7 +26,7 @@ export default function MarkdownEditor() {
         if (!token) return;
 
         try {
-            const response = await fetch("https://localhost:8000/files", {
+            const response = await fetch("http://localhost:8000/files", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` },
             });
@@ -62,7 +62,7 @@ export default function MarkdownEditor() {
         }
 
         try {
-            const response = await fetch("https://localhost:8000/save", {
+            const response = await fetch("http://localhost:8000/save", {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export default function MarkdownEditor() {
         if (!token) return;
 
         try {
-            const response = await fetch(`https://localhost:8000/load/${fileTitle}`, {
+            const response = await fetch(`http://localhost:8000/load/${fileTitle}`, {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` },
             });
@@ -124,7 +124,7 @@ export default function MarkdownEditor() {
         formData.append("file", file);
     
         try {
-            const response = await fetch("https://localhost:8000/upload", {
+            const response = await fetch("http://localhost:8000/upload", {
                 method: "POST",
                 headers: { "Authorization": `Bearer ${token}` }, // Attach token
                 body: formData,

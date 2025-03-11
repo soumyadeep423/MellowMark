@@ -5,7 +5,7 @@ var multer = require("multer");
 var fs = require("fs");
 var path = require("path");
 var app = express();
-require("dotenv").config();
+
 
 app.use(cors());
 app.use(express.json());
