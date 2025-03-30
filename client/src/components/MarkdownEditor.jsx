@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Showdown from "showdown";
 import { useNavigate } from "react-router-dom";
-require('dotenv').config();
+
 
 export default function MarkdownEditor() {
     const [title, setTitle] = useState(""); // File name
@@ -27,7 +27,7 @@ export default function MarkdownEditor() {
         if (!token) return;
 
         try {
-            const response = await fetch("/files", {
+            const response = await fetch("https://mellowmark.onrender.com/files", {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` },
             });
@@ -63,7 +63,7 @@ export default function MarkdownEditor() {
         }
 
         try {
-            const response = await fetch("/save", {
+            const response = await fetch("https://mellowmark.onrender.com/save", {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export default function MarkdownEditor() {
         if (!token) return;
 
         try {
-            const response = await fetch(`/load/${fileTitle}`, {
+            const response = await fetch(`https://mellowmark.onrender.com/load/${fileTitle}`, {
                 method: "GET",
                 headers: { "Authorization": `Bearer ${token}` },
             });
@@ -125,7 +125,7 @@ export default function MarkdownEditor() {
         formData.append("file", file);
     
         try {
-            const response = await fetch("/upload", {
+            const response = await fetch("https://mellowmark.onrender.com/upload", {
                 method: "POST",
                 headers: { "Authorization": `Bearer ${token}` }, // Attach token
                 body: formData,
