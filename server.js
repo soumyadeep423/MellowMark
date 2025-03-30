@@ -115,7 +115,7 @@ app.get("/", (req, res) => {
 });
 
 // Start Server
-const port = process.env.DEV_PORT;
+const port = process.env.DEV_PORT || 8000;
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}...`);
+    console.log(`Server running.......`);
 });

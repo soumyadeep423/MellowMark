@@ -4,7 +4,9 @@
   "description": "MellowMark is a **real-time Markdown editor** with **user authentication** and **database storage**. Users can **write, edit, save, and load Markdown files**, with a **dark mode UI** and **file management features**.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "npm install"
   },
   "author": "",
   "license": "ISC",

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png"; 
-require('dotenv').config();
 
 export default function Signup() {
     const [username, setUsername] = useState("");
@@ -17,7 +16,7 @@ export default function Signup() {
         }
 
         try {
-            const response = await fetch(process.env.BACKEND_URL + "auth/signup", {
+            const response = await fetch("/auth/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password }),
