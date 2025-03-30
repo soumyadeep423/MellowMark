@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Showdown from "showdown";
 import { useNavigate } from "react-router-dom";
+require('dotenv').config();
 
 export default function MarkdownEditor() {
     const [title, setTitle] = useState(""); // File name
