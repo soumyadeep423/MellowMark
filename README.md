@@ -24,3 +24,7 @@ MellowMark is a **real-time Markdown editor** with **user authentication** and *
 ```sh
 git clone https://github.com/your-username/mellowmark.git
 cd mellowmark
+
+####Backend hosted on Render
+####Frontend Hosted on Vercel
+####[Live Link](https://mellow-mark.vercel.app/)

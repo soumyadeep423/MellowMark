@@ -42,7 +42,7 @@ if (!fs.existsSync("uploads")) {
     fs.mkdirSync("uploads");
 }
 
-//  Fix File Upload Endpoint
+//  File Upload Endpoint
 app.post("/upload", authenticateUser, upload.single("file"), async (req, res) => {
     try {
         if (!req.file) {
