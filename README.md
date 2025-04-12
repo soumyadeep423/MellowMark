@@ -20,10 +20,11 @@ MellowMark is a **real-time Markdown editor** with **user authentication** and *
 
 ## 🛠️ Installation (Local Deployment)  
 
-### ** Clone the Repository**  
+### Clone the Repository 
 ```sh
 git clone https://github.com/your-username/mellowmark.git
 cd mellowmark
+```
 
 ####Backend hosted on Render
 ####Frontend Hosted on Vercel
