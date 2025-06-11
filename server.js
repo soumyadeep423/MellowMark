@@ -140,7 +140,9 @@ app.post("/generate-readme", authenticateUser, async (req, res) => {
     );
 
 
-    const prompt = `Generate a professional README.md file for the GitHub project below:
+    const prompt = `Generate the raw contents of a professional README.md file for the GitHub project below.
+Do NOT wrap the output in \`\`\` or \`\`\`markdown.
+Only return plain Markdown content as it would appear in a README.md file.
 
 Project Name: ${repoData.name}
 Description: ${repoData.description}
@@ -154,8 +156,7 @@ Include the following:
 - Installation guide
 - Usage
 - License (if applicable)
-
-Format it in Markdown.`;
+Also make use of emojis in the headings.`;
 
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(prompt);
