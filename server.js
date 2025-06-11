@@ -6,6 +6,7 @@ var fs = require("fs");
 var path = require("path");
 var app = express();
 const axios = require("axios");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 require('dotenv').config();
 
 
@@ -115,6 +116,7 @@ app.get("/", (req, res) => {
     res.send("Backend Running......");
 });
 
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 app.post("/generate-readme", authenticateUser, async (req, res) => {
   const { url } = req.body;
   try {
